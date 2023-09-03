@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf ../backend/build && react-scripts build && mv -f ./build ../backend/build",
+    "local-build": "rm -rf ../backend/build && rm -rf ../backend/static/* && rm -f ../backend/templates/index.html && react-scripts build && mkdir ../backend/templates && mv -f ./build/index.html ../backend/templates/index.html && mv -f ./build ../backend/build  && mv ../backend/build/static/* ../backend/build/ && rm -r ../backend/build/static",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

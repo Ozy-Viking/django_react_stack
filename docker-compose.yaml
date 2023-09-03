@@ -1,0 +1,8 @@
+services:
+  frontend:
+    build:
+      context: .
+    container_name: django_react_stack
+    ports:
+      - "80:80"
+    restart: unless-stopped
